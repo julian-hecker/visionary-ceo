@@ -1,0 +1,64 @@
+// === Utilities === //
+
+// Background Color
+.bg-orange {
+    background-color: $orange;
+}
+.bg-blue {
+    background-color: $blue;
+}
+.bg-dark {
+    background-color: $dark;
+}
+.bg-white {
+    background-color: $white;
+}
+.bg-grey {
+    background-color: $grey;
+}
+.bg-black {
+    background-color: $black;
+}
+
+// Color
+.clr-orange {
+    color: $orange;
+}
+.clr-blue {
+    color: $blue;
+}
+.clr-dark {
+    color: $dark;
+}
+.clr-white {
+    color: $white;
+}
+.clr-grey {
+    color: $grey;
+}
+.clr-black {
+    color: $black;
+}
+
+// Text Align
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+
+// https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

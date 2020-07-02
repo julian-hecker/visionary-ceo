@@ -1,0 +1,96 @@
+/**
+ * Visionary CEO
+ * by Julian Hecker
+ * for Probe Point Media
+ */
+
+
+@import 'base';
+@import 'reset';
+@import 'layout';
+@import 'components';
+@import 'utilities';
+@import 'animations';
+
+
+
+//  Inspiration
+//      https://www.sw.co.uk/
+
+//  Todo:
+//      Something's wrong on Contact, probably colors
+//      Reduce field width, perhaps?
+//
+//
+//  Donezo:
+//      Responsive Layout
+//      Images, colors
+//      Footer
+//      Create Content Blocks
+//      Chop Images
+//      Scroll Button
+//      Navbar
+//      Animate on Scroll
+//      Social Media Buttons
+//      Match links to sections
+//      Make navbar collapse sooner, use full words
+//      Navbar__nav section darker, links lighter
+//      Tweak Navbar, make it more reactive correctly
+//      Remove social button from header?
+//      Put copyright and made by in same section
+//      Make navbar appear sooner, because image is large
+//      media links in footer
+//      Scrolling links break on inner pages: Don't put js-scroll-link on navbar, footer; not reusable
+//      Parallax for inner page backgrounds
+//      Code Collab page
+//      Build inner pages
+//          Pages: about, collaborate with me
+//          **Design first, then development**
+//          Get inspiration from sites, dribbble, awwwards
+//          Make it simple, content-heavy
+//          Breadcrumbs, top image, etc.
+//          look at chabellycespedes.com for inspiration
+//      Popup Modal, CTA Form
+//          https://webdesign.tutsplus.com/tutorials/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500
+//          https://www.w3.org/TR/wai-aria-practices/examples/dialog-modal/dialog.html
+//          Popup form for newsletter signups
+//          Popup Animations
+//          AJAX Form Submissions
+//          Form: align items properly
+//          Create Contact page; copy form over
+//          Create modal CTA section on each page
+//          PHP for signups, contact forms
+//          Connect forms to new database tables
+//          Setup database on raspi server with existing php files
+//          Change something bout that modal, make it git gut
+//      Navbar
+//          Move navbar down a bit before scrolling
+//          Social Media icons from connect to header
+//          Like a finger's worth of space
+//          Lowercase "Work with me"
+//          More space between elements
+//          Hamburger layers closer together
+//      CTA
+//          Contrast CTA more
+//          Form alignment, maybe add an image
+//      Footer
+//          Support on its own line
+//          items centered
+//      Inner Pages
+//          should have consistent banner color
+//          Shorter banner
+//          Breadcrumbs should be on left, in grid, 1rem
+//          Margin at bottom of cards
+//          Cards should expand at larger size, same sizing
+//          Parallax images are buggy af
+//          Take off round borders on cards
+//          Spacer Images should be max-height 100px on mobile
+//      Contact
+//          Should be styled as an inner page
+//      Create "Thank you!" page
+//      Home
+//          card Links to blog articles
+//          blog article carousel https://swiperjs.com/api/
+//          https://swiperjs.com/demos/#loop_mode_with_multiple_slides_per_group
+//          https://swiperjs.com/demos/#keyboard_control
+//          https://swiperjs.com/demos/#responsive_breakpoints

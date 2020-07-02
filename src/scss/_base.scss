@@ -1,0 +1,74 @@
+// === Variables === //
+// Colors
+$orange: #d91;
+$blue: #38c;
+$dark: #035;
+$white: #eef;
+$grey: #bbc;
+$black: #123;
+
+// Fonts
+$font-pri: "Roboto";
+$font-sec: "Lato";
+
+// === Mixins === //
+@mixin background-defaults($color: null) {
+    background-attachment: scroll;
+    @if ($color) {
+        background-color: $color;
+    }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// @mixin background-before($url: null, $color: null) {
+//     // Including a background as a ::before element
+//     // Lets you style it separately from its content
+//     position: relative;
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         top: 0; right: 0; bottom: 0; left: 0;
+//         @include background-defaults($color);
+//         background-image: url($url);
+//         @content; // Other styles for background image
+//     }
+// }
+
+@mixin background-element($color) {
+    & {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        @include background-defaults($color);
+        @content;
+    }
+}
+
+@mixin hfa() {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+
+@mixin bg-image-before($url) {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        @include background-defaults;
+        background-image: url($url);
+        @content;
+    }
+}
+
+// Make responsive mixins
+// @mixin responsive($breakpoint)
+// @mixin small+ { @include responsive(576, up) }

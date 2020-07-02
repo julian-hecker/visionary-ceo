@@ -1,0 +1,269 @@
+// === Layout === //
+
+// Generic Section
+.section {
+    position: relative;
+    padding: 4rem 0;
+    overflow: hidden;
+    &__background {
+        @include background-element($black) {
+            // Default blue
+        }
+    }
+}
+
+// Header Section
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    min-height: 400px;
+    font-weight: bolder;
+    color: white;
+
+    &__content {
+        font-size: 1.5rem;
+        transform: skew(-10deg);
+    }
+
+    &__logo {
+        position: relative;
+        padding: .5rem .5rem;
+        width: max-content;
+        max-width: 20rem;
+        
+        background-color: $white;
+        color: $black;
+        mix-blend-mode: screen; // busted for some reason
+
+        font-size: 2rem;
+        font-weight: bolder;
+        letter-spacing: .1rem;
+        font-variant: small-caps;
+        vertical-align: top;
+    }
+
+    &__subtitle {
+        padding: 0.5rem;
+        width: max-content;
+        max-width: 25rem;
+        background-color: $orange;
+        color: $white;
+        font-size: 80%;
+        font-weight: normal;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+    }
+}
+
+// About Section
+
+.about {
+    background-color: $white;
+    color: $dark;
+    @include bg-image-before("../assets/images/DSC00269.jpg") {
+        background-position: top;
+        opacity: 0.1;
+    }
+}
+
+// Collaborate Section
+.collab {
+    background-color: $white;
+    color: $dark;
+
+    &__image {
+    }
+
+    @include bg-image-before("../assets/images/DSC00417.jpg") {
+        opacity: 0.1;
+    }
+}
+
+// Call to Action Section
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-height: 600px;
+    height: 50vh;
+    // background-color: $dark;
+    // @include background-before("../assets/images/DSC00787-new.jpg", $blue) {
+    //     background-position: 50% 25%;
+    // }
+    @media (max-width: 768px) {
+        justify-content: flex-end;
+    }
+
+    & .content-block {
+        color: $dark;
+        background-color: rgba($white, 0.9) !important;
+    }
+}
+
+// Connect Section
+.blog {
+    background-color: $white;
+    color: $dark;
+
+    
+    @include bg-image-before("../assets/images/DSC00129.jpg") {
+        background-position: top;
+        opacity: 0.1;
+    }
+
+
+}
+
+.newsletter {
+    background-color: $dark;
+    color: $white;
+    &__heading {
+        color: $orange;
+    }
+    &__cta {
+        width: 30rem;
+        max-width: 100%;
+        margin: auto;
+    }
+}
+
+// Footer
+.footer {
+    background-color: $black;
+    color: $grey;
+
+    &__category {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    &__category-title {
+        color: $orange;
+        font-weight: bolder;
+        text-transform: capitalize;
+    }
+    a {
+        color: $white;
+    }
+}
+
+// Lower Footer
+.footer-bottom {
+    background-color: $orange;
+    &__logo {
+        padding: 0.5rem;
+    }
+}
+
+// Inner Pages
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    height: 40vh;
+    max-height: 30rem;
+    font-weight: bolder;
+    color: white;
+
+    &__content {
+        position: relative;
+        top: 4rem; // should be same as section's y-padding
+        & > p {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: $orange;
+            color: $white;
+            font-size: 1.3rem;
+            transform: skew(-10deg);
+        }
+    }
+    p {
+        margin: 0;
+    }
+    a {
+        color: inherit;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+// THESE ARTICLES ARE ABOUT / COLLAB
+.article {
+    padding: 2rem 0;
+    line-height: 1.75;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $orange;
+        font-weight: bolder;
+    }
+
+    section {
+        padding: 1.5rem 15px;
+    }
+
+    .spacer-img {
+        margin: 2rem 0;
+        min-height: 100px;
+        height: 30vh;
+        overflow: hidden;
+        @include background-defaults;
+    }
+}
+
+
+// ACTUAL BLOG ARTICLES GO HERE
+.article-page {
+    background-color: darken($white, 2.5%);
+}
+
+.article-wrapper {
+    box-shadow: 0 0 0.25rem $black;
+    margin-top:     4rem;
+    margin-bottom:  4rem;
+    background-color: $white;
+}
+
+
+.blog-article {
+    margin: auto;
+    padding: 4rem 2rem;
+    max-width: 900px;
+}
+
+// blog carousel section
+.carousel {
+    background-color: darken($white, 2%);
+    color: $dark;
+    h2 {
+        color: $orange;
+        font-weight: bolder;
+    }
+}
+
+// layout section
+.articles {
+    background-color: $white;
+}
+
+.blog-layout {
+    column-count: 20;
+    column-width: 16rem;
+    column-gap: 1.5rem;
+    max-height: max-content;
+    @media (max-width: 992px) {
+        column-gap: 2rem;
+        & > .blog-card {
+            margin-bottom: 2rem;
+        }
+    }
+}
